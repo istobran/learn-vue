@@ -8,7 +8,8 @@ module.exports = {
   extends: 'standard',
   // required to lint *.vue files
   plugins: [
-    'html'
+    'html',
+    'eslint-plugin-html'
   ],
   // add your custom rules here
   'rules': {
@@ -17,6 +18,8 @@ module.exports = {
     // allow async-await
     'generator-star-spacing': 0,
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    // enforce semicolons
+    semi: ["warn", "always"]
   }
 }
